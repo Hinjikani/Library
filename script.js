@@ -6,6 +6,7 @@ let title = document.querySelector("#title");
 let author = document.querySelector("#author");
 let pages = document.querySelector("#pages");
 let status = document.querySelector("#status");
+let dialogForm = document.querySelector(".dialogForm")
 
 function Book(name, author, pages, status) {
     this.id = crypto.randomUUID()
@@ -34,5 +35,6 @@ function showOutput() {
     let bookPages = pages.value;
     let bookStatus = status.value;
     addBookToLibrary(bookTitle, bookAuthor, bookPages, bookStatus);
+    dialogForm.reset()
     dialog.close()
 }
