@@ -24,12 +24,15 @@ function addBookPopup() {
     dialog.showModal();
 }
 
+function closePopup() {
+    dialog.close()
+}
+
 function showOutput() {
     let bookTitle = title.value;
     let bookAuthor = author.value;
     let bookPages = pages.value;
     let bookStatus = status.value;
     addBookToLibrary(bookTitle, bookAuthor, bookPages, bookStatus);
-    console.log("Book added! Library now has:", library.length, "books");
-    console.log("Current library:", library);
+    dialog.close()
 }
